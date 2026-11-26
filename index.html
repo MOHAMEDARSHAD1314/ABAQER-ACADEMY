@@ -468,11 +468,19 @@ nav a:hover {
     height: 120px;
   }
 
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
+ nav {
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+  align-items: stretch;
+}
+
+nav a {
+  text-align: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+}
     
 
       .hero {
