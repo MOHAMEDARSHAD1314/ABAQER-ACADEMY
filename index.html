@@ -787,12 +787,9 @@ object-fit: contain;
         class timings and student registration.
       </p>
 
-      <a
-        href="https://wa.me/919092969459?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20register%20for%20ABAQER%20ACADEMY."
-        class="button button-gold"
-      >
-        Student Registration
-      </a>
+     <a href="#registration" class="button button-gold">
+  Student Registration
+</a>
 
     </div>
   </section>
@@ -835,6 +832,211 @@ object-fit: contain;
       </div>
     </div>
   </section>
+  
+<!-- ABAQER ACADEMY PREMIUM REGISTRATION FORM -->
+
+<style>
+.registration-section {
+  padding: 65px 18px;
+  background: #071f18;
+  color: white;
+}
+
+.registration-card {
+  max-width: 680px;
+  margin: auto;
+  padding: 30px;
+  background: #103629;
+  border: 2px solid #c9a64b;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.35);
+}
+
+.registration-logo {
+  display: block;
+  width: 230px;
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto 15px;
+  object-fit: contain;
+}
+
+.registration-card h2 {
+  color: #e5c46b;
+  text-align: center;
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+
+.registration-subtitle {
+  text-align: center;
+  color: #e5e5e5;
+  margin-bottom: 25px;
+}
+
+.registration-heading {
+  color: #e5c46b;
+  font-size: 18px;
+  margin: 25px 0 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #a98b43;
+}
+
+.registration-card label {
+  display: block;
+  margin: 15px 0 7px;
+  color: #f0d78c;
+  font-weight: 600;
+}
+
+.registration-card input,
+.registration-card select,
+.registration-card textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  border: 1px solid #c9a64b;
+  border-radius: 8px;
+  background: #fff;
+  color: #17251e;
+  font-size: 15px;
+}
+
+.registration-card textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.registration-submit {
+  width: 100%;
+  margin-top: 28px;
+  padding: 16px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(135deg,#f0d78c,#bd963b);
+  color: #10251b;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.registration-submit:hover {
+  opacity: .9;
+}
+
+.registration-footer {
+  text-align: center;
+  color: #e5c46b;
+  margin-top: 22px;
+  font-size: 13px;
+}
+
+@media(max-width:600px) {
+  .registration-card {
+    padding: 22px 17px;
+  }
+
+  .registration-card h2 {
+    font-size: 23px;
+  }
+}
+</style>
+
+<section id="registration" class="registration-section">
+  <div class="registration-card">
+
+    <img
+      src="Copilot_20260520_085814.png"
+      alt="ABAQER ACADEMY Logo"
+      class="registration-logo"
+    >
+
+    <h2>STUDENT REGISTRATION FORM</h2>
+
+    <p class="registration-subtitle">
+      ABAQER ACADEMY<br>
+      Islamic Online Education
+    </p>
+
+    <form onsubmit="sendRegistrationToWhatsApp(event)">
+
+      <h3 class="registration-heading">01. STUDENT DETAILS</h3>
+
+      <label>Student Full Name *</label>
+      <input type="text" name="studentName"
+        placeholder="Enter full name" required>
+
+      <label>WhatsApp Number *</label>
+      <input type="tel" name="phone"
+        placeholder="Enter mobile number" required>
+
+      <label>Email Address</label>
+      <input type="email" name="email"
+        placeholder="Enter email address">
+
+      <h3 class="registration-heading">02. COURSE DETAILS</h3>
+
+      <label>Select Course *</label>
+      <select name="course" required>
+        <option value="">Choose your course</option>
+        <option>Quran Reading</option>
+        <option>Tajweed</option>
+        <option>Islamic Studies</option>
+        <option>Arabic Language</option>
+        <option>Other</option>
+      </select>
+
+      <label>Preferred Class Timing</label>
+      <select name="timing">
+        <option value="">Choose preferred timing</option>
+        <option>Morning</option>
+        <option>Afternoon</option>
+        <option>Evening</option>
+        <option>Flexible</option>
+      </select>
+
+      <label>Additional Message</label>
+      <textarea name="message"
+        placeholder="Write your message here"></textarea>
+
+      <button type="submit" class="registration-submit">
+        SUBMIT REGISTRATION
+      </button>
+
+    </form>
+
+    <div class="registration-footer">
+      Learn with Faith. Grow with Knowledge.
+    </div>
+
+  </div>
+</section>
+
+<script>
+function sendRegistrationToWhatsApp(event) {
+  event.preventDefault();
+
+  const data = new FormData(event.target);
+
+  const message =
+    "ABAQER ACADEMY - STUDENT REGISTRATION\n\n" +
+    "Student Name: " + data.get("studentName") + "\n" +
+    "WhatsApp Number: " + data.get("phone") + "\n" +
+    "Email: " + (data.get("email") || "Not provided") + "\n" +
+    "Course: " + data.get("course") + "\n" +
+    "Class Timing: " + (data.get("timing") || "Not specified") + "\n" +
+    "Message: " + (data.get("message") || "None");
+
+  const url =
+    "https://wa.me/919092969459?text=" +
+    encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
+
+<!-- END REGISTRATION FORM -->
+
 
   <!-- FOOTER -->
 
