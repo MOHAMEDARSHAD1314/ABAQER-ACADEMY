@@ -1,163 +1,830 @@
 <!DOCTYPE html>
-<!--
-  Kinetic Template
-  https://templatemo.com/tm-631-kinetic
--->
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>The Kinetic // Experimental Interactive Studio</title>
-        <meta name="description"
-              content="The Kinetic - an experimental, mechanically advanced creative agency interface built with pure vanilla HTML, CSS and JS.">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@700;800&display=swap"
-              rel="stylesheet">
-        <link rel="stylesheet" href="templatemo-631-kinetic-style.css">
-    </head>
-    <body>
-        <!-- ====================== TOP BAR ====================== -->
-        <nav class="topbar">
-            <a class="brand" href="#hero">KIN<span>E</span>TIC</a>
-            <div class="nav-index">
-                <a href="#hero">01 / String</a>
-                <a href="#projects">02 / Matrix</a>
-                <a href="#reveal">03 / Lenticular</a>
-                <a href="#initiate">04 / Initiate</a>
-            </div>
-        </nav>
-        <!-- ====================== 01 HERO ====================== -->
-        <section class="hero" id="hero">
-            <h1 class="hero-title">KIN<b>E</b>TIC</h1>
-            <svg class="string-svg"
-                 id="stringSvg"
-                 preserveAspectRatio="none"
-                 aria-hidden="true">
-                <path class="string-path" id="stringPath"></path>
-                <circle class="string-anchor" id="anchorL" r="5"></circle>
-                <circle class="string-anchor" id="anchorR" r="5"></circle>
-                <circle class="string-grip"   id="grip"    r="7"></circle>
-            </svg>
-            <div class="hero-foot">
-                <span class="mono-label">Vanguard Interactive Studio</span>
-                <p>Pull the string. Drag the matrix. Sweep the print. Every surface on this page is a machine you operate with motion.</p>
-            </div>
-            <div class="hero-hint">[ move cursor to bend ]</div>
-        </section>
-        <!-- ====================== 02 MATRIX ====================== -->
-        <section class="matrix-wrap" id="projects">
-            <div class="section-head">
-                <h2>THE <i>MATRIX</i> ACCORDION</h2>
-                <p>Nine works on a flat grid. Select any cell to force it open. The other eight collapse into strips.</p>
-            </div>
-            <div class="matrix" id="matrix">
-                <!-- swap images/project-01.jpg ... project-09.jpg with your own -->
-                <div class="cell" tabindex="0" role="button" aria-label="Project Helix">
-                    <div class="cell-media" style="background-image:url('images/project-01.jpg')"></div>
-                    <div class="cell-num">01</div>
-                    <div class="cell-name">Helix</div>
-                    <div class="cell-detail">A generative identity system that rewrites its own logotype on every page load.</div>
-                    <div class="cell-cat">Brand / Code</div>
-                </div>
-                <div class="cell" tabindex="0" role="button" aria-label="Project Drift">
-                    <div class="cell-media" style="background-image:url('images/project-02.jpg')"></div>
-                    <div class="cell-num">02</div>
-                    <div class="cell-name">Drift</div>
-                    <div class="cell-detail">Scroll-driven editorial for a kinetic typeface foundry, set entirely in motion type.</div>
-                    <div class="cell-cat">Web / Type</div>
-                </div>
-                <div class="cell" tabindex="0" role="button" aria-label="Project Onyx">
-                    <div class="cell-media" style="background-image:url('images/project-03.jpg')"></div>
-                    <div class="cell-num">03</div>
-                    <div class="cell-name">Onyx</div>
-                    <div class="cell-detail">Dark-mode commerce flow with physics-based add-to-cart and elastic transitions.</div>
-                    <div class="cell-cat">Product / UX</div>
-                </div>
-                <div class="cell" tabindex="0" role="button" aria-label="Project Pulse">
-                    <div class="cell-media" style="background-image:url('images/project-04.jpg')"></div>
-                    <div class="cell-num">04</div>
-                    <div class="cell-name">Pulse</div>
-                    <div class="cell-detail">A real-time audio-reactive visual built on the Web Audio API and raw canvas.</div>
-                    <div class="cell-cat">Sound / Visual</div>
-                </div>
-                <div class="cell" tabindex="0" role="button" aria-label="Project Vellum">
-                    <div class="cell-media" style="background-image:url('images/project-05.jpg')"></div>
-                    <div class="cell-num">05</div>
-                    <div class="cell-name">Vellum</div>
-                    <div class="cell-detail">Tactile portfolio with page-turn mechanics and a paper-grain shader fallback.</div>
-                    <div class="cell-cat">Editorial</div>
-                </div>
-                <div class="cell" tabindex="0" role="button" aria-label="Project Signal">
-                    <div class="cell-media" style="background-image:url('images/project-06.jpg')"></div>
-                    <div class="cell-num">06</div>
-                    <div class="cell-name">Signal</div>
-                    <div class="cell-detail">Broadcast microsite where every UI control doubles as a working oscilloscope.</div>
-                    <div class="cell-cat">Campaign</div>
-                </div>
-                <div class="cell" tabindex="0" role="button" aria-label="Project Forge">
-                    <div class="cell-media" style="background-image:url('images/project-07.jpg')"></div>
-                    <div class="cell-num">07</div>
-                    <div class="cell-name">Forge</div>
-                    <div class="cell-detail">Configurator for a hardware studio with a live exploded-view 3D assembly.</div>
-                    <div class="cell-cat">Industrial</div>
-                </div>
-                <div class="cell" tabindex="0" role="button" aria-label="Project Lumen">
-                    <div class="cell-media" style="background-image:url('images/project-08.jpg')"></div>
-                    <div class="cell-num">08</div>
-                    <div class="cell-name">Lumen</div>
-                    <div class="cell-detail">Light-installation control panel mapped to a single sweeping gesture surface.</div>
-                    <div class="cell-cat">Spatial</div>
-                </div>
-                <div class="cell" tabindex="0" role="button" aria-label="Project Apex">
-                    <div class="cell-media" style="background-image:url('images/project-09.jpg')"></div>
-                    <div class="cell-num">09</div>
-                    <div class="cell-name">Apex</div>
-                    <div class="cell-detail">Awards-shortlisted launch site for an EV brand, driven entirely by scroll velocity.</div>
-                    <div class="cell-cat">Launch</div>
-                </div>
-            </div>
-        </section>
-        <!-- ====================== 03 LENTICULAR ====================== -->
-        <section class="reveal" id="reveal">
-            <div class="reveal-cap">
-                <span class="mono-label">Lenticular Print // Live</span>
-                <h2>SWEEP TO <i>FLIP</i> THE FRAME</h2>
-                <p style="font-size:.64rem;
-                          letter-spacing:.22em;
-                          text-transform:uppercase;
-                          color:var(--accent-1);
-                          margin-top:10px">[ run the cursor past both edges for a full flip ]</p>
-            </div>
-            <div class="lenti-stage" id="lentiStage">
-                <div class="lenti" id="lenti" aria-hidden="true"
-                     data-front="images/kinetic-10.jpg"
-                     data-back="images/kinetic-11.jpg"></div>
-            </div>
-        </section>
-        <!-- ====================== 04 INITIATE ====================== -->
-        <footer class="initiate" id="initiate">
-            <div class="initiate-inner">
-                <h2 class="scatter" id="scatter">TEMPLATE.MO // INITIATE</h2>
-                <div class="sub-wrap" id="subWrap">
-                    <form class="subscribe" id="subscribe" novalidate>
-                        <input type="email"
-                               class="sub-input"
-                               id="subEmail"
-                               placeholder="you@studio.com"
-                               aria-label="Email address"
-                               required>
-                        <button type="submit" class="sub-btn">Initiate</button>
-                    </form>
-                    <div class="sub-note" id="subNote">Join the drop list. No noise.</div>
-                </div>
-            </div>
-            <div class="sig-foot">
-                <span>The Kinetic // Experimental Build 1.0</span>
-                <span>Click the type to scatter or reassemble</span>
-                <span>Free HTML Template by <a href="https://templatemo.com" rel="nofollow" target="_blank">TemplateMo</a></span>
-            </div>
-        </footer>
-        <script src="templatemo-631-kinetic-script.js"></script>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ABAQER ACADEMY | Islamic Online Education</title>
+
+  <meta name="description" content="ABAQER ACADEMY - Learn Quran, Islamic Studies and Arabic online with dedicated teachers.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --green: #073f35;
+      --dark-green: #052e27;
+      --gold: #d8b66a;
+      --cream: #faf8f0;
+      --white: #ffffff;
+      --text: #26352f;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      background: var(--dark-green);
+      color: white;
+      padding: 18px 0;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+      color: var(--gold);
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: white;
+      font-weight: 400;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .nav-button {
+      background: var(--gold);
+      color: var(--dark-green);
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: 700;
+    }
+
+    /* HERO */
+
+    .hero {
+      background:
+        radial-gradient(circle at top right, #176b56, transparent 45%),
+        linear-gradient(135deg, #052e27, #0b4b3c);
+      color: white;
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 760px;
+      text-align: center;
+      margin: auto;
+    }
+
+    .hero-label {
+      color: var(--gold);
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .bismillah {
+      font-family: 'Amiri', serif;
+      font-size: 32px;
+      color: var(--gold);
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(35px, 6vw, 62px);
+      line-height: 1.2;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      color: #dce9e2;
+      max-width: 620px;
+      margin: 0 auto 30px;
+      font-size: 15px;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .button-gold {
+      background: var(--gold);
+      color: var(--dark-green);
+    }
+
+    .button-outline {
+      border: 1px solid var(--gold);
+      color: white;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-heading small {
+      color: #a47b2e;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      color: var(--green);
+      font-size: 34px;
+      margin: 10px 0;
+    }
+
+    .section-heading p {
+      color: #66736d;
+      max-width: 650px;
+      margin: auto;
+      font-size: 14px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: white;
+    }
+
+    .about-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-content h3 {
+      font-family: 'Amiri', serif;
+      color: var(--green);
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .about-content p {
+      color: #66736d;
+      margin-bottom: 15px;
+    }
+
+    /* COURSES */
+
+    .courses {
+      background: var(--cream);
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .course-card {
+      background: white;
+      border: 1px solid #e8e3d5;
+      padding: 30px;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .course-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px #073f3512;
+      border-color: var(--gold);
+    }
+
+    .course-icon {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .course-card h3 {
+      color: var(--green);
+      margin-bottom: 12px;
+      font-size: 19px;
+    }
+
+    .course-card p {
+      color: #68756f;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .course-card a {
+      color: #a47b2e;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    /* WHY US */
+
+    .why-us {
+      background: var(--green);
+      color: white;
+    }
+
+    .why-us .section-heading h2 {
+      color: white;
+    }
+
+    .why-us .section-heading p {
+      color: #d1e0d8;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .why-item {
+      text-align: center;
+      padding: 25px 15px;
+      border: 1px solid #ffffff20;
+      border-radius: 12px;
+    }
+
+    .why-item h3 {
+      color: var(--gold);
+      font-size: 16px;
+      margin: 12px 0;
+    }
+
+    .why-item p {
+      font-size: 12px;
+      color: #d1e0d8;
+    }
+
+    /* TEACHERS */
+
+    .teachers {
+      background: white;
+    }
+
+    .teacher-card {
+      max-width: 650px;
+      margin: auto;
+      background: var(--cream);
+      padding: 35px;
+      border-radius: 15px;
+      text-align: center;
+      border: 1px solid #e8e3d5;
+    }
+
+    .teacher-card h3 {
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+
+    .teacher-card p {
+      color: #68756f;
+      font-size: 14px;
+    }
+
+    /* REGISTRATION */
+
+    .registration {
+      background: #f0eadb;
+      text-align: center;
+    }
+
+    .registration h2 {
+      color: var(--green);
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .registration p {
+      color: #66736d;
+      max-width: 600px;
+      margin: 0 auto 25px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: white;
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .contact-box p {
+      margin: 12px 0;
+      color: #66736d;
+    }
+
+    .contact-box strong {
+      color: var(--green);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--dark-green);
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+      border-top: 2px solid var(--gold);
+    }
+
+    footer .footer-name {
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: #d1e0d8;
+      margin: 5px 0;
+    }
+
+    /* WHATSAPP */
+
+    .whatsapp {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      background: #25d366;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 40px;
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 5px 20px #0002;
+      z-index: 100;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+      .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav {
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      .bismillah {
+        font-size: 25px;
+      }
+
+      .course-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .section-heading h2 {
+        font-size: 27px;
+      }
+
+      .whatsapp {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="container navbar">
+
+      <a href="#home" class="logo">
+        ABAQER ACADEMY
+        <span>ISLAMIC ONLINE EDUCATION</span>
+      </a>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#teachers">Teachers</a>
+        <a href="#contact" class="nav-button">Contact Us</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+    <div class="container hero-content">
+
+      <div class="hero-label">WELCOME TO ABAQER ACADEMY</div>
+
+      <div class="bismillah">
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+      </div>
+
+      <h1>
+        Learn Islam.<br>
+        <span>Live with Faith.</span>
+      </h1>
+
+      <p>
+        Begin your journey of Islamic knowledge with ABAQER ACADEMY.
+        Learn Quran, Islamic Studies and Arabic from the comfort
+        of your home.
+      </p>
+
+      <div class="button-group">
+        <a href="#courses" class="button button-gold">
+          Explore Courses
+        </a>
+
+        <a href="#registration" class="button button-outline">
+          Register Now
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+    <div class="container">
+
+      <div class="section-heading">
+        <small>Who We Are</small>
+        <h2>About Our Academy</h2>
+      </div>
+
+      <div class="about-content">
+
+        <h3>Knowledge for a Better Life</h3>
+
+        <p>
+          ABAQER ACADEMY is an Islamic online education academy
+          dedicated to helping students learn and understand
+          Islamic teachings.
+        </p>
+
+        <p>
+          Our aim is to provide convenient online learning
+          opportunities for children and adults through
+          structured lessons and dedicated teaching.
+        </p>
+
+        <p>
+          We believe that beneficial knowledge helps us grow
+          in faith, character and daily life.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+
+  <section class="courses" id="courses">
+    <div class="container">
+
+      <div class="section-heading">
+        <small>Our Learning Programs</small>
+        <h2>Explore Our Courses</h2>
+        <p>
+          Discover Islamic learning programs designed
+          for different ages and learning levels.
+        </p>
+      </div>
+
+      <div class="course-grid">
+
+        <div class="course-card">
+          <div class="course-icon">📖</div>
+          <h3>Quran Reading</h3>
+          <p>
+            Learn Quran reading step by step with
+            proper pronunciation and guidance.
+          </p>
+          <a href="#registration">Enquire Now →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">🌙</div>
+          <h3>Islamic Studies</h3>
+          <p>
+            Learn about Islamic beliefs, values,
+            daily practices and good character.
+          </p>
+          <a href="#registration">Enquire Now →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">🕌</div>
+          <h3>Basic Islamic Knowledge</h3>
+          <p>
+            Understand essential Islamic knowledge
+            for everyday life.
+          </p>
+          <a href="#registration">Enquire Now →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">🔤</div>
+          <h3>Arabic Language</h3>
+          <p>
+            Begin learning Arabic letters, words
+            and basic language skills.
+          </p>
+          <a href="#registration">Enquire Now →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">🤲</div>
+          <h3>Daily Duas</h3>
+          <p>
+            Learn daily duas, their meanings
+            and when to recite them.
+          </p>
+          <a href="#registration">Enquire Now →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">⭐</div>
+          <h3>Islamic Values for Kids</h3>
+          <p>
+            Introduce children to Islamic manners,
+            kindness and good habits.
+          </p>
+          <a href="#registration">Enquire Now →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+
+  <section class="why-us">
+    <div class="container">
+
+      <div class="section-heading">
+        <small>Our Commitment</small>
+        <h2>Why Choose ABAQER ACADEMY?</h2>
+        <p>
+          A convenient and welcoming environment
+          for your Islamic learning journey.
+        </p>
+      </div>
+
+      <div class="why-grid">
+
+        <div class="why-item">
+          <div>💻</div>
+          <h3>Online Learning</h3>
+          <p>Learn from the comfort of your home.</p>
+        </div>
+
+        <div class="why-item">
+          <div>📚</div>
+          <h3>Structured Lessons</h3>
+          <p>Learn through organized course topics.</p>
+        </div>
+
+        <div class="why-item">
+          <div>👨‍🏫</div>
+          <h3>Teacher Guidance</h3>
+          <p>Receive guidance during your learning.</p>
+        </div>
+
+        <div class="why-item">
+          <div>🕰️</div>
+          <h3>Flexible Learning</h3>
+          <p>Ask about suitable class timings.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TEACHERS -->
+
+  <section class="teachers" id="teachers">
+    <div class="container">
+
+      <div class="section-heading">
+        <small>Our Teaching Team</small>
+        <h2>Meet Our Teachers</h2>
+      </div>
+
+      <div class="teacher-card">
+
+        <div class="course-icon">🎓</div>
+
+        <h3>Dedicated Islamic Educators</h3>
+
+        <p>
+          Our academy aims to provide learning with
+          knowledgeable and dedicated teachers who
+          guide students with care and respect.
+        </p>
+
+        <p>
+          Contact us to learn more about our teachers
+          and available learning programs.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION -->
+
+  <section class="registration" id="registration">
+    <div class="container">
+
+      <h2>Begin Your Learning Journey</h2>
+
+      <p>
+        Interested in joining ABAQER ACADEMY?
+        Contact us to enquire about courses,
+        class timings and student registration.
+      </p>
+
+      <a
+        href="https://wa.me/91XXXXXXXXXX?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20register%20for%20ABAQER%20ACADEMY."
+        class="button button-gold"
+      >
+        Student Registration
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <div class="section-heading">
+        <small>Get in Touch</small>
+        <h2>Contact ABAQER ACADEMY</h2>
+        <p>
+          We would be happy to help you
+          with your Islamic learning journey.
+        </p>
+      </div>
+
+      <div class="contact-box">
+
+        <p>
+          <strong>Academy:</strong> ABAQER ACADEMY
+        </p>
+
+        <p>
+          <strong>Learning Mode:</strong> Online
+        </p>
+
+        <p>
+          <strong>Contact:</strong> WhatsApp
+        </p>
+
+        <a
+          href="https://wa.me/91XXXXXXXXXX"
+          class="button button-gold"
+        >
+          Contact on WhatsApp
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="footer-name">ABAQER ACADEMY</div>
+
+    <p>Islamic Online Education</p>
+
+    <p>
+      Learn with Faith. Grow with Knowledge.
+    </p>
+
+    <p>
+      © 2026 ABAQER ACADEMY. All Rights Reserved.
+    </p>
+  </footer>
+
+  <!-- WHATSAPP BUTTON -->
+
+  <a
+    href="https://wa.me/91XXXXXXXXXX"
+    class="whatsapp"
+    target="_blank"
+    rel="noopener"
+  >
+    WhatsApp Us
+  </a>
+
+</body>
 </html>
