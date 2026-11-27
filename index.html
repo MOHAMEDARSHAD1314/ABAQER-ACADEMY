@@ -1380,6 +1380,224 @@ object-fit: contain;
   }
 }
 
+/* ROYAL EMERALD REGISTRATION DESIGN */
+
+.registration-section {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 20px !important;
+  background:
+    radial-gradient(ellipse at 50% 40%, #175c48 0%, transparent 65%),
+    linear-gradient(135deg, #031713, #082c24, #031713) !important;
+}
+
+/* Islamic decorative atmosphere */
+
+.registration-section::before {
+  content: "۞";
+  position: absolute;
+  top: 10px;
+  left: 2%;
+  font-size: 220px;
+  color: rgba(218, 181, 99, 0.08);
+  pointer-events: none;
+}
+
+.registration-section::after {
+  content: "۞";
+  position: absolute;
+  bottom: 0;
+  right: 2%;
+  font-size: 220px;
+  color: rgba(218, 181, 99, 0.08);
+  pointer-events: none;
+}
+
+/* Premium glass registration card */
+
+.registration-section .registration-card {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: auto;
+  padding: 50px 45px;
+  background:
+    linear-gradient(145deg, rgba(19, 68, 55, 0.97),
+    rgba(5, 35, 28, 0.98)) !important;
+  border: 1px solid #b99650 !important;
+  border-radius: 25px !important;
+  box-shadow:
+    0 0 0 5px rgba(185, 150, 80, 0.08),
+    0 25px 70px rgba(0, 0, 0, 0.5),
+    inset 0 1px 25px rgba(255, 255, 255, 0.04) !important;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.registration-section .registration-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 35px rgba(218, 181, 99, 0.18),
+    0 30px 75px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Academy logo */
+
+.registration-logo {
+  display: block;
+  width: 155px;
+  max-width: 65%;
+  height: auto;
+  margin: 0 auto 25px;
+  filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.4));
+}
+
+/* Main heading */
+
+.registration-section .registration-card h2 {
+  color: #f3d78e !important;
+  font-size: 29px;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.registration-subtitle {
+  color: #d6c69c !important;
+  font-size: 14px;
+  line-height: 1.9;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+/* Form section headings */
+
+.registration-heading {
+  color: #e9c875 !important;
+  font-size: 17px;
+  letter-spacing: 1.5px;
+  margin: 32px 0 22px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(218, 181, 99, 0.4);
+}
+
+/* Labels */
+
+.registration-section .registration-card label {
+  display: block;
+  color: #f0dfb7 !important;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 18px 0 9px;
+}
+
+/* Input fields */
+
+.registration-section .registration-card input,
+.registration-section .registration-card select,
+.registration-section .registration-card textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 16px;
+  color: #ffffff !important;
+  background: rgba(2, 25, 20, 0.75) !important;
+  border: 1px solid rgba(207, 177, 108, 0.38) !important;
+  border-radius: 11px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registration-section .registration-card input::placeholder,
+.registration-section .registration-card textarea::placeholder {
+  color: #a9b9ae !important;
+}
+
+.registration-section .registration-card input:focus,
+.registration-section .registration-card select:focus,
+.registration-section .registration-card textarea:focus {
+  border-color: #e4c273 !important;
+  box-shadow: 0 0 15px rgba(228, 194, 115, 0.17);
+}
+
+.registration-section .registration-card select option {
+  color: #ffffff;
+  background: #103b32;
+}
+
+.registration-section .registration-card textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* Gold submit button */
+
+.registration-submit {
+  display: block;
+  width: 100%;
+  margin-top: 32px;
+  padding: 17px 20px;
+  color: #10291f !important;
+  background: linear-gradient(135deg, #f3df9f, #c49a48, #f0d78f) !important;
+  border: 1px solid #f5dfa0 !important;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(194, 153, 69, 0.22);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registration-submit:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(218, 181, 99, 0.4);
+}
+
+/* Footer */
+
+.registration-footer {
+  color: #e8ca80 !important;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+}
+
+/* Mobile design */
+
+@media (max-width: 600px) {
+  .registration-section {
+    padding: 65px 14px !important;
+  }
+
+  .registration-section .registration-card {
+    padding: 32px 20px;
+    border-radius: 19px !important;
+  }
+
+  .registration-section .registration-card h2 {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .registration-heading {
+    font-size: 15px;
+  }
+
+  .registration-logo {
+    width: 125px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .registration-card,
+  .registration-submit {
+    transition: none;
+  }
+}
+
 </style>
 
 <section id="registration" class="registration-section">
