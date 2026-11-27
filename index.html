@@ -636,6 +636,15 @@ object-fit: contain;
       </a>
     </div>
 
+<div class="hero-quran">
+  <div class="quran-glow"></div>
+  <img
+    src="quran-hero.png"
+    alt="Open Quran on an ornate wooden stand"
+    class="quran-image"
+  >
+</div>
+
     <div class="hero-bottom">
       KNOWLEDGE • FAITH • CHARACTER
     </div>
@@ -999,6 +1008,138 @@ object-fit: contain;
     font-size: 23px;
   }
 }
+
+/* PREMIUM QURAN ANIMATION */
+
+.hero-quran {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  margin: 25px auto 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  isolation: isolate;
+}
+
+.quran-glow {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 196, 65, 0.42),
+    rgba(212, 175, 55, 0.12) 45%,
+    transparent 72%
+  );
+  filter: blur(35px);
+  animation: goldenGlow 4s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+.quran-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+  animation: quranFloat 5s ease-in-out infinite,
+             quranZoom 7s ease-in-out infinite;
+}
+
+@keyframes quranFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+@keyframes quranZoom {
+  0%, 100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.04;
+  }
+}
+
+@keyframes goldenGlow {
+  from {
+    opacity: 0.55;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* FLOATING GOLDEN PARTICLES */
+
+.hero-quran::before,
+.hero-quran::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, #ffd76a 2px, transparent 3px),
+    radial-gradient(circle, #ffffff 1px, transparent 2px),
+    radial-gradient(circle, #d6a84b 2px, transparent 3px);
+  background-size: 95px 100px, 130px 120px, 170px 150px;
+  background-position: 0 0, 45px 30px, 80px 70px;
+  animation: goldenParticles 12s linear infinite;
+  opacity: 0.65;
+}
+
+.hero-quran::after {
+  animation-duration: 18s;
+  animation-direction: reverse;
+  opacity: 0.35;
+}
+
+@keyframes goldenParticles {
+  from {
+    background-position: 0 0, 45px 30px, 80px 70px;
+  }
+  to {
+    background-position: 0 -300px, 45px -270px, 80px -350px;
+  }
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+  .hero-quran {
+    max-width: 100%;
+    margin: 15px auto;
+  }
+
+  .hero-quran::before,
+  .hero-quran::after {
+    opacity: 0.3;
+  }
+
+  .quran-image {
+    max-width: 100%;
+  }
+}
+
+/* RESPECT REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .quran-image,
+  .quran-glow,
+  .hero-quran::before,
+  .hero-quran::after {
+    animation: none;
+  }
+}
+
 </style>
 
 <section id="registration" class="registration-section">
