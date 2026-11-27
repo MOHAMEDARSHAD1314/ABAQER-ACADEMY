@@ -519,22 +519,83 @@ nav a:hover {
 
     /* REGISTRATION */
 
-    .registration {
-      background: #f0eadb;
-      text-align: center;
-    }
+   
+/* PREMIUM REGISTRATION SECTION */
 
-    .registration h2 {
-      color: var(--green);
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
+.registration {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #073f35, #0b5948, #073f35);
+  text-align: center;
+  padding: 100px 20px;
+}
 
-    .registration p {
-      color: #66736d;
-      max-width: 600px;
-      margin: 0 auto 25px;
-    }
+.registration::before,
+.registration::after {
+  content: "۞";
+  position: absolute;
+  color: rgba(230, 195, 111, 0.09);
+  font-size: 190px;
+  pointer-events: none;
+}
+
+.registration::before {
+  top: -35px;
+  left: -35px;
+}
+
+.registration::after {
+  bottom: -45px;
+  right: -35px;
+}
+
+.registration h2 {
+  position: relative;
+  color: #f2d58a;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.registration p {
+  position: relative;
+  color: #ffffff;
+  max-width: 650px;
+  margin: 0 auto 30px;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.registration .registration-card {
+  position: relative;
+  max-width: 750px;
+  margin: 35px auto 0;
+  padding: 45px 35px;
+  background: linear-gradient(145deg, #ffffff, #f8f5eb);
+  border: 1px solid #d6b45e;
+  border-radius: 25px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.registration .registration-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.28);
+}
+
+@media (max-width: 600px) {
+  .registration {
+    padding: 70px 15px;
+  }
+
+  .registration h2 {
+    font-size: 29px;
+  }
+
+  .registration .registration-card {
+    padding: 30px 20px;
+  }
+}
+
 
     /* CONTACT */
 
