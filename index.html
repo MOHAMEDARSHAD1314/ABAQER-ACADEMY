@@ -2118,6 +2118,137 @@ object-fit: contain;
 }
 
 
+/* ABAQER ACADEMY — ROYAL HERO UPGRADE */
+
+.hero {
+  background:
+    radial-gradient(ellipse at 50% 75%, rgba(218,181,99,0.13), transparent 38%),
+    radial-gradient(ellipse at 50% 0%, rgba(35,125,91,0.5), transparent 55%),
+    linear-gradient(135deg, #021812, #07513d 52%, #031e17) !important;
+  padding-top: 125px;
+  padding-bottom: 100px;
+}
+
+.hero-label {
+  padding: 11px 23px;
+  border: 1px solid rgba(243,213,139,0.45);
+  border-radius: 30px;
+  background: rgba(243,213,139,0.07);
+  box-shadow: 0 0 25px rgba(243,213,139,0.08);
+  text-shadow: 0 0 12px rgba(243,213,139,0.3);
+}
+
+.bismillah {
+  text-shadow: 0 0 25px rgba(243,213,139,0.35);
+}
+
+.hero h1 {
+  text-shadow: 0 8px 35px rgba(0,0,0,0.3);
+}
+
+.hero h1 span {
+  text-shadow: 0 0 25px rgba(243,213,139,0.2);
+}
+
+.hero p {
+  max-width: 680px;
+}
+
+/* Elegant Quran presentation */
+
+.hero-quran {
+  position: relative;
+  width: min(100%, 490px);
+  margin: 65px auto 0;
+  padding: 28px 20px;
+  isolation: isolate;
+}
+
+.hero-quran::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 8% 0;
+  border: 1px solid rgba(243,213,139,0.55);
+  border-radius: 230px 230px 24px 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(243,213,139,0.08),
+    rgba(0,0,0,0.08)
+  );
+  box-shadow:
+    0 0 35px rgba(243,213,139,0.09),
+    inset 0 0 35px rgba(243,213,139,0.05);
+}
+
+.quran-glow {
+  position: absolute;
+  z-index: -1;
+  width: 75%;
+  height: 75%;
+  top: 12%;
+  left: 12.5%;
+  border-radius: 50%;
+  background: rgba(243,213,139,0.22);
+  filter: blur(65px);
+  pointer-events: none;
+}
+
+.quran-image {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: auto;
+  border-radius: 15px;
+  border: 1px solid rgba(243,213,139,0.45);
+  box-shadow:
+    0 20px 55px rgba(0,0,0,0.4),
+    0 0 30px rgba(243,213,139,0.12);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.quran-image:hover {
+  transform: translateY(-7px) scale(1.015);
+  box-shadow:
+    0 28px 65px rgba(0,0,0,0.45),
+    0 0 40px rgba(243,213,139,0.22);
+}
+
+.hero-bottom {
+  margin-top: 60px;
+  text-shadow: 0 0 15px rgba(243,213,139,0.2);
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 85px 16px 70px;
+  }
+
+  .hero-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .hero-quran {
+    margin-top: 45px;
+    padding: 22px 12px;
+  }
+
+  .hero-bottom {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quran-image {
+    transition: none;
+  }
+}
+
 </style>
 
 <section id="registration" class="registration-section">
