@@ -782,6 +782,33 @@ object-fit: contain;
           We believe that beneficial knowledge helps us grow
           in faith, character and daily life.
         </p>
+        
+<div class="vision-mission">
+
+  <div class="vm-card">
+    <div class="vm-icon">🌙</div>
+    <h3>Our Vision</h3>
+    <p>
+      To nurture a generation illuminated by Islamic knowledge,
+      guided by the Qur'an and Sunnah, and inspired to live a
+      life that seeks Allah's pleasure and the ultimate success
+      of Jannah.
+    </p>
+  </div>
+
+  <div class="vm-card">
+    <div class="vm-icon">📖</div>
+    <h3>Our Mission</h3>
+    <p>
+      To make authentic Islamic knowledge accessible through
+      quality online education, nurturing strong faith,
+      beautiful character and beneficial knowledge for
+      everyday life.
+    </p>
+  </div>
+
+</div>
+
 
       </div>
     </div>
@@ -1236,6 +1263,59 @@ object-fit: contain;
   .hero-quran::before,
   .hero-quran::after {
     animation: none;
+  }
+}
+
+/* PREMIUM VISION & MISSION CARDS */
+
+.vision-mission {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.vm-card {
+  position: relative;
+  overflow: hidden;
+  padding: 35px 28px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #073f35, #105b49);
+  border: 1px solid rgba(212, 175, 55, 0.55);
+  box-shadow: 0 12px 30px rgba(7, 63, 53, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.vm-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(7, 63, 53, 0.25);
+}
+
+.vm-icon {
+  font-size: 38px;
+  margin-bottom: 18px;
+}
+
+.vm-card h3 {
+  color: #f2d58a;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.vm-card p {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .vision-mission {
+    grid-template-columns: 1fr;
+  }
+
+  .vm-card {
+    padding: 28px 22px;
   }
 }
 
