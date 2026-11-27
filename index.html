@@ -522,7 +522,7 @@ nav a:hover {
    
 /* PREMIUM REGISTRATION SECTION */
 
-.registration {
+.registration-section {
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, #073f35, #0b5948, #073f35);
@@ -530,8 +530,8 @@ nav a:hover {
   padding: 100px 20px;
 }
 
-.registration::before,
-.registration::after {
+.registration-section::before,
+.registration-section::after {
   content: "۞";
   position: absolute;
   color: rgba(230, 195, 111, 0.09);
@@ -539,24 +539,24 @@ nav a:hover {
   pointer-events: none;
 }
 
-.registration::before {
+.registration-section::before {
   top: -35px;
   left: -35px;
 }
 
-.registration::after {
+.registration-section::after {
   bottom: -45px;
   right: -35px;
 }
 
-.registration h2 {
+.registration-section h2{
   position: relative;
   color: #f2d58a;
   font-size: 36px;
   margin-bottom: 20px;
 }
 
-.registration p {
+.registration-section p {
   position: relative;
   color: #ffffff;
   max-width: 650px;
@@ -565,7 +565,7 @@ nav a:hover {
   line-height: 1.9;
 }
 
-.registration .registration-card {
+.registration-section .registration-card {
   position: relative;
   max-width: 750px;
   margin: 35px auto 0;
@@ -577,21 +577,21 @@ nav a:hover {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.registration .registration-card:hover {
+.registration-section .registration-card:hover {
   transform: translateY(-7px);
   box-shadow: 0 28px 60px rgba(0, 0, 0, 0.28);
 }
 
 @media (max-width: 600px) {
-  .registration {
+  .registration-section {
     padding: 70px 15px;
   }
 
-  .registration h2 {
+  .registration-section h2{
     font-size: 29px;
   }
 
-  .registration .registration-card {
+  .registration-section .registration-card {
     padding: 30px 20px;
   }
 }
