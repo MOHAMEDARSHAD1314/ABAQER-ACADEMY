@@ -2114,6 +2114,39 @@ object-fit: contain;
   }
 }
 
+/* PREMIUM ISLAMIC GEOMETRIC OVERLAY */
+
+body {
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.10;
+
+  background-image:
+    repeating-conic-gradient(
+      from 0deg at 50% 50%,
+      transparent 0deg 43deg,
+      rgba(224, 185, 92, 0.65) 44deg 45deg,
+      transparent 46deg 90deg
+    );
+
+  background-size: 85px 85px;
+  background-position: center;
+}
+
+@media (max-width: 600px) {
+  body::after {
+    opacity: 0.06;
+    background-size: 65px 65px;
+  }
+}
+
 </style>
 
 <section id="registration" class="registration-section">
