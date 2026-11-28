@@ -1344,6 +1344,124 @@ object-fit: contain;
   </div>
 </section>
 
+<!-- FREQUENTLY ASKED QUESTIONS -->
+
+<section class="faq-section" id="faq">
+  <div class="container">
+
+    <div class="section-heading">
+      <small>Need More Information?</small>
+      <h2>Frequently Asked Questions</h2>
+      <p>
+        Find answers to common questions about learning
+        with ABAQER ACADEMY.
+      </p>
+    </div>
+
+    <div class="faq-container">
+
+      <details class="faq-item">
+        <summary>What courses does ABAQER ACADEMY offer?</summary>
+        <p>
+          We offer Quran Reading with Tajweed Rules,
+          Quran Memorization (Hifz), Islamic History,
+          Hadith Studies and Arabic Language.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Are classes conducted online?</summary>
+        <p>
+          Yes! All our classes are conducted online,
+          allowing students to learn from the comfort
+          of their homes.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Who can join ABAQER ACADEMY?</summary>
+        <p>
+          We warmly welcome learners of all age groups,
+          including children, teenagers and adults.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can complete beginners join?</summary>
+        <p>
+          Absolutely! Beginners with no previous Quran
+          reading experience are highly welcome.
+          We guide them step by step.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Are classes individual or group-based?</summary>
+        <p>
+          We primarily provide individual one-to-one
+          classes. Group classes may also be arranged
+          in suitable situations.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Are class timings flexible?</summary>
+        <p>
+          Yes! Class timings can be arranged according
+          to students' availability.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can I attend a demo class before joining?</summary>
+        <p>
+          Certainly! We provide demo classes to help
+          students understand our teaching approach
+          before enrolment.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Will students receive certificates?</summary>
+        <p>
+          Yes! Students receive certificates after
+          successfully completing their respective courses.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How can I know the course fees?</summary>
+        <p>
+          Please contact us through WhatsApp for
+          course fee details and further information.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Which languages are used during classes?</summary>
+        <p>
+          We aim to arrange communication in a language
+          convenient for the student, depending on
+          teacher availability.
+        </p>
+      </details>
+
+    </div>
+
+    <div class="faq-contact">
+      <h3>Still Have Questions?</h3>
+      <p>We would be happy to assist you!</p>
+      <a href="https://wa.me/919092969459"
+         target="_blank" rel="noopener">
+        Contact Us on WhatsApp →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- END FAQ SECTION -->
+
   <!-- CONTACT -->
 
   <section class="contact" id="contact">
@@ -3072,6 +3190,134 @@ box-sizing: border-box;
   .certificate-intro-highlight {
     font-size: 9px;
     letter-spacing: 1px;
+  }
+}
+
+/* PREMIUM FAQ SECTION */
+
+.faq-section {
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #f8f7f1, #ffffff);
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 45px auto 0;
+}
+
+.faq-item {
+  background: #ffffff;
+  margin-bottom: 16px;
+  border: 1px solid rgba(190, 155, 76, 0.35);
+  border-left: 4px solid #b99a50;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 45, 35, 0.06);
+  transition: 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 45, 35, 0.12);
+}
+
+.faq-item summary {
+  padding: 22px 25px;
+  color: #075344;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 55px;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 23px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b99a50;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item[open] summary {
+  color: #a17d32;
+}
+
+.faq-item p {
+  padding: 0 25px 22px;
+  margin: 0;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.faq-contact {
+  max-width: 900px;
+  margin: 45px auto 0;
+  padding: 35px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #063f34, #08705a);
+  border: 1px solid #c5a45a;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 45, 35, 0.15);
+}
+
+.faq-contact h3 {
+  color: #e5c779;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.faq-contact p {
+  color: #ffffff;
+  margin-bottom: 22px;
+}
+
+.faq-contact a {
+  display: inline-block;
+  padding: 13px 27px;
+  background: linear-gradient(135deg, #e6cb82, #bd9848);
+  color: #073f34;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.faq-contact a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .faq-section {
+    padding: 70px 15px;
+  }
+
+  .faq-item summary {
+    padding: 19px 45px 19px 17px;
+    font-size: 14px;
+  }
+
+  .faq-item p {
+    padding: 0 17px 19px;
+    font-size: 14px;
+  }
+
+  .faq-contact h3 {
+    font-size: 21px;
   }
 }
 
