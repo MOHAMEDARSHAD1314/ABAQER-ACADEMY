@@ -1151,6 +1151,49 @@ object-fit: contain;
   </div>
 </section>
 
+<!-- PREMIUM CERTIFICATE GALLERY -->
+<section class="certificate-gallery" id="certificates">
+  <div class="container">
+
+    <div class="section-heading">
+      <small>Excellence & Recognition</small>
+      <h2>Our Students' Certificates</h2>
+      <p>
+        Celebrating dedication, commitment and
+        achievement in Quranic learning.
+      </p>
+    </div>
+
+    <div class="certificate-grid">
+
+      <div class="certificate-item">
+        <img src="certificate-01.png" alt="Quran Tajweed completion certificate 1">
+        <h3>Certificate of Achievement</h3>
+        <p>Quran Tajweed Rules</p>
+      </div>
+
+      <div class="certificate-item">
+        <img src="certificate-02.png" alt="Quran Tajweed completion certificate 2">
+        <h3>Certificate of Achievement</h3>
+        <p>Quran Tajweed Rules</p>
+      </div>
+
+      <div class="certificate-item">
+        <img src="certificate-03.png" alt="Quran Tajweed completion certificate 3">
+        <h3>Certificate of Achievement</h3>
+        <p>Quran Tajweed Rules</p>
+      </div>
+
+      <div class="certificate-item">
+        <img src="certificate-04.png" alt="Quran Tajweed completion certificate 4">
+        <h3>Certificate of Achievement</h3>
+        <p>Quran Tajweed Rules</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
   <!-- WHY CHOOSE US -->
 
@@ -2708,6 +2751,98 @@ box-sizing: border-box;
 
   .achievement-details {
     gap: 25px;
+  }
+}
+
+/* PREMIUM CERTIFICATE GALLERY */
+.certificate-gallery {
+  padding: 100px 20px;
+  background:
+    radial-gradient(circle at top, #145c46, transparent 55%),
+    linear-gradient(145deg, #022c22, #064e3b, #011c16);
+  position: relative;
+  overflow: hidden;
+}
+
+.certificate-gallery .section-heading small {
+  color: #e4c675;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.certificate-gallery .section-heading h2 {
+  color: #ffffff;
+}
+
+.certificate-gallery .section-heading p {
+  color: #e5e7eb;
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 35px;
+  max-width: 1100px;
+  margin: 55px auto 0;
+}
+
+.certificate-item {
+  padding: 18px;
+  text-align: center;
+  background: linear-gradient(145deg, #ffffff, #f4edda);
+  border: 2px solid #d5b45b;
+  border-radius: 18px;
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.35),
+    inset 0 0 18px rgba(201, 164, 76, 0.15);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+  position: relative;
+}
+
+.certificate-item:hover {
+  transform: translateY(-12px) scale(1.025);
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.45),
+    0 0 25px rgba(228, 198, 117, 0.35);
+}
+
+.certificate-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.414 / 1;
+  object-fit: contain;
+  background: #ffffff;
+  border: 1px solid #c9a44c;
+  border-radius: 8px;
+}
+
+.certificate-item h3 {
+  color: #064e3b;
+  font-size: 19px;
+  margin: 18px 0 7px;
+}
+
+.certificate-item p {
+  color: #806323;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+@media (max-width: 700px) {
+  .certificate-gallery {
+    padding: 75px 15px;
+  }
+
+  .certificate-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 500px;
+  }
+
+  .certificate-item {
+    padding: 13px;
   }
 }
 
