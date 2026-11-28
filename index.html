@@ -2520,6 +2520,30 @@ box-sizing: border-box;
   order: 0;
 }
 
+/* MOBILE MENU - SHOW ALL NAVIGATION LINKS */
+@media (max-width: 768px) {
+  #mainNav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    height: 100dvh !important;
+    max-height: 100vh;
+    overflow-y: auto !important;
+    padding-top: 90px;
+    padding-bottom: 40px;
+  }
+
+  #mainNav a {
+    display: block !important;
+    width: 100%;
+    flex-shrink: 0;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 18px 12px;
+  }
+}
+
 </style>
 
 <section id="registration" class="registration-section">
