@@ -3077,6 +3077,7 @@ box-sizing: border-box;
 
 </style>
 
+
 <section id="registration" class="registration-section">
   <div class="registration-card">
 
@@ -3099,7 +3100,11 @@ box-sizing: border-box;
 
       <label>Student Full Name *</label>
       <input type="text" name="studentName"
-        placeholder="Enter full name" required>
+        placeholder="Enter student full name" required>
+
+      <label>Student Age *</label>
+      <input type="number" name="age"
+        placeholder="Enter student age" min="3" max="100" required>
 
       <label>WhatsApp Number *</label>
       <input type="tel" name="phone"
@@ -3109,20 +3114,30 @@ box-sizing: border-box;
       <input type="email" name="email"
         placeholder="Enter email address">
 
-      <h3 class="registration-heading">02. COURSE DETAILS</h3>
+      <h3 class="registration-heading">02. PARENT / GUARDIAN DETAILS</h3>
 
-      <label>Select Course *</label>
+      <label>Parent / Guardian Name</label>
+      <input type="text" name="guardianName"
+        placeholder="Enter parent or guardian name">
+
+      <label>Parent / Guardian Contact Number</label>
+      <input type="tel" name="guardianPhone"
+        placeholder="Enter contact number">
+
+      <h3 class="registration-heading">03. COURSE DETAILS</h3>
+
+      <label>Select Your Course *</label>
       <select name="course" required>
         <option value="">Choose your course</option>
-        <option>Quran Reading</option>
-        <option>Tajweed</option>
-        <option>Islamic Studies</option>
+        <option>Quran Reading with Tajweed Rules</option>
+        <option>Quran Memorization (Hifz)</option>
+        <option>Islamic History</option>
+        <option>Hadith Studies</option>
         <option>Arabic Language</option>
-        <option>Other</option>
       </select>
 
-      <label>Preferred Class Timing</label>
-      <select name="timing">
+      <label>Preferred Class Timing *</label>
+      <select name="timing" required>
         <option value="">Choose preferred timing</option>
         <option>Morning</option>
         <option>Afternoon</option>
@@ -3130,9 +3145,16 @@ box-sizing: border-box;
         <option>Flexible</option>
       </select>
 
+      <label>Learning Preference</label>
+      <select name="learningMode">
+        <option value="">Choose learning preference</option>
+        <option>Online Classes</option>
+        <option>Other / Please Discuss</option>
+      </select>
+
       <label>Additional Message</label>
       <textarea name="message"
-        placeholder="Write your message here"></textarea>
+        placeholder="Tell us anything you would like us to know"></textarea>
 
       <button type="submit" class="registration-submit">
         SUBMIT REGISTRATION
@@ -3148,6 +3170,8 @@ box-sizing: border-box;
 </section>
 
 <script>
+
+<script>
 function sendRegistrationToWhatsApp(event) {
   event.preventDefault();
 
@@ -3155,12 +3179,22 @@ function sendRegistrationToWhatsApp(event) {
 
   const message =
     "ABAQER ACADEMY - STUDENT REGISTRATION\n\n" +
+    "STUDENT DETAILS\n" +
     "Student Name: " + data.get("studentName") + "\n" +
+    "Age: " + data.get("age") + "\n" +
     "WhatsApp Number: " + data.get("phone") + "\n" +
-    "Email: " + (data.get("email") || "Not provided") + "\n" +
+    "Email: " + (data.get("email") || "Not provided") + "\n\n" +
+
+    "PARENT / GUARDIAN DETAILS\n" +
+    "Guardian Name: " + (data.get("guardianName") || "Not provided") + "\n" +
+    "Guardian Contact: " + (data.get("guardianPhone") || "Not provided") + "\n\n" +
+
+    "COURSE DETAILS\n" +
     "Course: " + data.get("course") + "\n" +
-    "Class Timing: " + (data.get("timing") || "Not specified") + "\n" +
-    "Message: " + (data.get("message") || "None");
+    "Class Timing: " + data.get("timing") + "\n" +
+    "Learning Preference: " + (data.get("learningMode") || "Not specified") + "\n\n" +
+
+    "Additional Message: " + (data.get("message") || "None");
 
   const url =
     "https://wa.me/919092969459?text=" +
@@ -3168,6 +3202,8 @@ function sendRegistrationToWhatsApp(event) {
 
   window.open(url, "_blank");
 }
+</script>
+
 </script>
 
 <!-- END REGISTRATION FORM -->
