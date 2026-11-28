@@ -2846,6 +2846,60 @@ box-sizing: border-box;
   }
 }
 
+/* PREMIUM CERTIFICATE VIEWER */
+.certificate-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(0, 20, 15, 0.96);
+  backdrop-filter: blur(12px);
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px 25px;
+}
+
+.certificate-lightbox.active {
+  display: flex;
+}
+
+.certificate-lightbox img {
+  max-width: 95%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 3px solid #d5b45b;
+  border-radius: 10px;
+  box-shadow: 0 0 35px rgba(228, 198, 117, 0.35);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 25px;
+  background: transparent;
+  border: 2px solid #d5b45b;
+  color: #e4c675;
+  font-size: 38px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  line-height: 1;
+  transition: 0.3s ease;
+}
+
+.lightbox-close:hover {
+  background: #d5b45b;
+  color: #022c22;
+  transform: rotate(90deg);
+}
+
+.certificate-item img {
+  cursor: zoom-in;
+}
+
 </style>
 
 <section id="registration" class="registration-section">
@@ -3042,6 +3096,54 @@ function sendRegistrationToWhatsApp(event) {
       menuToggle.setAttribute("aria-expanded", "false");
       menuToggle.setAttribute("aria-label", "Open navigation menu");
     });
+  });
+</script>
+
+<!-- CERTIFICATE LIGHTBOX -->
+<div class="certificate-lightbox" id="certificateLightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close certificate">
+    &times;
+  </button>
+  <img id="lightboxImage" src="" alt="Enlarged certificate">
+</div>
+
+<script>
+  const certificateImages = document.querySelectorAll(
+    ".certificate-item img"
+  );
+
+  const certificateLightbox = document.getElementById(
+    "certificateLightbox"
+  );
+
+  const lightboxImage = document.getElementById("lightboxImage");
+
+  const lightboxClose = document.getElementById("lightboxClose");
+
+  certificateImages.forEach(function (image) {
+    image.addEventListener("click", function () {
+      lightboxImage.src = image.src;
+      certificateLightbox.classList.add("active");
+    });
+  });
+
+  lightboxClose.addEventListener("click", function () {
+    certificateLightbox.classList.remove("active");
+    lightboxImage.src = "";
+  });
+
+  certificateLightbox.addEventListener("click", function (event) {
+    if (event.target === certificateLightbox) {
+      certificateLightbox.classList.remove("active");
+      lightboxImage.src = "";
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      certificateLightbox.classList.remove("active");
+      lightboxImage.src = "";
+    }
   });
 </script>
 
