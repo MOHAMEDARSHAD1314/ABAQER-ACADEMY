@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mohamedarshad1314.github.io/ABAQER-ACADEMY/sitemap.xml
